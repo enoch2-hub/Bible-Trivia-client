@@ -1,0 +1,69 @@
+/* src/components/CrosswordPuzzle.css */
+.crossword-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .crossword-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+    gap: 1px;
+  }
+  
+  .crossword-row {
+    display: flex;
+  }
+  
+  .crossword-cell {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .black-cell {
+    background-color: #000;
+  }
+  
+  .cell-number {
+    position: absolute;
+    font-size: 0.6em;
+    color: #888;
+  }
+  
+  .cell-input {
+    width: 100%;
+    height: 100%;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    border: none;
+    text-align: center;
+    outline: none;
+  }
+  
+  .crossword-clues {
+    margin-left: 20px;
+    max-width: 300px;
+  }
+  
+  .crossword-clues h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+  
+  .crossword-clues ul {
+    padding-left: 20px;
+  }
+  
+  .crossword-clues li {
+    font-size: 1em;
+    list-style-type: none;
+    margin-bottom: 5px;
+  }
+  

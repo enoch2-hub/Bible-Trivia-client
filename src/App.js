@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Home from './components/Home/Home';
+import DailyPuzzle from './components/DailyPuzzle/DailyCrossword';
+import MemoryGame from './components/MemoryGame';
+import BibleTrivia from './components/BibleTrivia/BibleTrivia';
+import Crossword from './components/Crossword/Crossword';
+import WordSearch from './components/WordSearch';
+import Navbar from './partials/Navbar/Navbar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        {/* <Navbar/> */}
+      <Routes>
+        <Route path="/" exact element={<Home/>} />
+        {/* <Route path="/cross-puzzle" element={<Crossword/>} /> */}
+        <Route path="/daily-puzzle" element={<DailyPuzzle/>} />
+        <Route path="/memory-game" element={<MemoryGame/>} />
+        <Route path="/bible-trivia" element={<BibleTrivia/>} />
+        <Route path="/crossword" element={<Crossword/>} />
+        <Route path="/word-search" element={<WordSearch/>} />
+      </Routes>
+    </Router>
   );
 }
 

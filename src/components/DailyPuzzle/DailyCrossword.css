@@ -1,0 +1,63 @@
+/* DailyCrossword.css */
+
+.daily-crossword-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .crossword-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); /* Adjust based on your puzzle size */
+    gap: 1px;
+  }
+  
+  .crossword-row {
+    display: contents;
+  }
+  
+  .crossword-cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .black-cell {
+    background-color: #000;
+  }
+  
+  .cell-number {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    font-size: 10px;
+  }
+  
+  .cell-input {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: none;
+  }
+  
+  .crossword-clues {
+    margin-top: 20px;
+  }
+  
+  .crossword-clues h3 {
+    margin-bottom: 10px;
+  }
+  
+  .crossword-clues ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .crossword-clues li {
+    margin-bottom: 5px;
+  }
+  
